@@ -487,3 +487,8 @@ if disclaimer:
 else:
     st.markdown("<p style='color: gray; font-size: 14px;'>StarForge predicts, but the future’s still a mystery! Past performance isn’t indicative of future results. Invest wisely.</p>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
+
+st.write("Enter the Stock name or Forex for which you want to see the prediction.Please enter your mobile and email for further communication on your requirement")
+feedback = st.text_area("Please enter the stock or forex or both.", height=100)
+if st.button("Submit Request"):
+    st.write("Thank you for the input. We will Reach out soon")
