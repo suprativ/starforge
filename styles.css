@@ -105,7 +105,7 @@ h2 {
 }
 
 .stSidebar > h2 {
-    color: white; /* Dark gray for sidebar title */
+    color: #ffff; /* Dark gray for sidebar title */
     font-size: 20px;
     font-weight: bold; /* Bold for prominence */
     text-align: left;
