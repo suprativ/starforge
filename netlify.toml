@@ -1,0 +1,6 @@
+[build]
+command = "pip install -r requirements.txt"
+publish = ""
+
+[dev]
+command = "streamlit run app_streamlit.py --server.port $PORT"
