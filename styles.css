@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Very light gray background */
+    margin: 0;
+}
+
+/* Rounded Body for Main Content */
+.rounded-body {
+    padding: 30px; /* Increased padding for elegance */
+    background-color: #ffffff; /* Pure white for main content */
+    border-radius: 20px; /* Nice, rounded corners for responsiveness */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer, elegant shadow */
+    border: 1px solid #e0e0e0; /* Light gray border for elegance */
+    margin: 20px auto; /* Center and add margin for responsiveness */
+    max-width: 1200px; /* Limit width for desktop, responsive on mobile */
+}
+
+/* Headers */
+h1 {
+    color: #fffcff; /* Purple for "StarForge" */
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+    animation: fadeIn 1s ease-in;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff8c00; /* Orange for "Your Future, Predicted!" */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in 0.5s;
+    margin-bottom: 30px;
+}
+
+/* Fade-in animation for headers */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Metric Cards */
+.stMetric {
+    border-radius: 12px; /* Rounded corners as in screenshot */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+    margin: 10px; /* Reduced margin for compactness */
+    padding: 15px; /* Consistent padding */
+    background-color: #ffffff; /* Pure white background */
+    border: 1px solid #d0d0d0; /* Light gray border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Flex for better alignment */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items */
+    min-width: 200px; /* Ensure cards are wide enough */
+    max-width: 250px; /* Limit width for uniformity */
+}
+
+.stMetric:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.stMetric > div {
+    font-size: 14px; /* Clear, readable text */
+    color: #333333; /* Dark gray text */
+    font-weight: 500; /* Medium weight for readability */
+    text-align: center; /* Center text for consistency */
+}
+
+.stMetric > div > span {
+    font-size: 24px; /* Larger numbers for emphasis */
+    color: #1a1a1a; /* Dark gray (near black) for numbers */
+    font-weight: bold; /* Bold for prominence */
+    display: block; /* Ensure span takes full width */
+    margin-top: 5px; /* Space between label and value */
+}
+
+/* Images */
+.stImage > img {
+    border: 5px solid #1a1a1a; /* Dark gray (near black) border for stock images */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+    margin: 15px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stImage > img:hover {
+    transform: scale(1.05);
+    border-color: #4a4a4a; /* Medium gray on hover for subtlety */
+}
+
+/* Sidebar */
+.stSidebar {
+    background-color: #2b2727; /* Light gray background */
+    border-right: 1px solid #d0d0d0; /* Lighter gray border */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+    padding: 20px;
+}
+
+.stSidebar > h2 {
+    color: #1a1a1a; /* Dark gray for sidebar title */
+    font-size: 20px;
+    font-weight: bold; /* Bold for prominence */
+    text-align: left;
+}
+
+.stSidebar .stSelectbox, .stSidebar .stButton>button {
+    margin-bottom: 15px; /* Space between elements */
+}
+
+.stSidebar .stSelectbox label {
+    color: #faf6f6; /* Dark gray for labels */
+    font-size: 20px; /* Larger, readable labels */
+    font-weight: 500;
+}
+
+.stSidebar .stSelectbox select {
+    background-color: #ffffff; /* White background for dropdowns */
+    border: 1px solid rgb(231, 221, 221); /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px; /* Padding for readability */
+    font-size: 14px; /* Readable text */
+    color: #333333; /* Dark gray text */
+}
+
+.stSidebar .stButton>button {
+    background-color: #faf7f7; /* Dark gray (near black) for button */
+    color: rgb(10, 9, 9);
+    border: none;
+    border-radius: 10px; /* Slightly larger for elegance */
+    padding: 12px 24px;
+    font-size: 16px; /* Larger, bold text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Full width for prominence */
+}
+
+.stSidebar .stButton>button:hover {
+    background-color: #efe5e5; /* Slightly lighter gray on hover */
+    transform: translateY(-2px);
+}
+
+/* Separator */
+.stock-forex-separator {
+    border-top: 2px solid #d0d0d0; /* Light gray line, no text */
+    margin: 40px 0; /* Larger margin for prominence */
+}
+
+/* Graphs */
+.stImage > img[alt*="Price Trend"] {
+    border: none; /* Remove border for graphs */
+    box-shadow: none; /* Remove shadow for graphs */
+    margin: 20px 0; /* More space around graphs */
+}
+
+/* Expanders */
+.stExpander {
+    border: 1px solid #d0d0d0; /* Lighter gray border */
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stExpander > div {
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-color: #1a1a1a transparent #4a4a4a transparent !important; /* Dark and medium gray for spinner */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rounded-body {
+        padding: 15px; /* Reduced padding on mobile */
+        border-radius: 15px; /* Slightly smaller radius on mobile */
+        margin: 10px auto; /* Adjust margin for mobile */
+        max-width: 90%; /* More responsive width */
+    }
+    h1 {
+        font-size: 28px; /* Slightly smaller on mobile */
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .stMetric {
+        margin: 8px;
+        padding: 12px;
+        min-width: 150px; /* Smaller on mobile */
+        max-width: 200px;
+    }
+    .stMetric > div > span {
+        font-size: 20px; /* Smaller numbers on mobile */
+    }
+    .stImage > img {
+        max-width: 90%;
+    }
+    .stSidebar {
+        padding: 10px;
+    }
+    .stSidebar .stButton>button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .stock-forex-separator {
+        margin: 20px 0;
+    }
+}
+
+/* Warning and Error Messages */
+.stWarning, .stError {
+    background-color: #fff0f0; /* Light grayish-white */
+    border: 1px solid #d0d0d0; /* Lighter gray border */
+    border-radius: 10px;
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #b6ce2d; /* Medium gray for messages */
+}
