@@ -4,4 +4,4 @@ numpy
 pandas
 xgboost
 matplotlib
-scikit-learn==1.3.2  # Use version 1.3.2, which is pre-built and works on Render
+scikit-learn==1.5.1  # Use a pre-built, binary version that doesn’t need compilation
