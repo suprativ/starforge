@@ -12,7 +12,7 @@ from datetime import datetime
 import csv  # Added for accuracy loading
 
 # Define SECRET_VAULT to match train_model.py
-SECRET_VAULT = "starforge/my_star_vault"
+SECRET_VAULT = "my_star_vault"
 
 # Clear Streamlit cache to ensure new graph loads
 st.cache_data.clear()
