@@ -408,10 +408,10 @@ usd_to_inr = get_usd_to_inr()
 # Sidebar
 # st.sidebar.title("Click to Select Stock or Forex")
 stock_options = [f"{symbol} - {name}" for symbol, name in stocks.items()]
-selected_stock = st.sidebar.selectbox("Select a Stock:", [""] + stock_options)
+selected_stock = st.sidebar.selectbox("Select STOCK:", [""] + stock_options)
 forex_options = [f"{symbol.replace('=X', '')} - {name}" for symbol, name in forex.items()]
-selected_forex = st.sidebar.selectbox("Pick a Forex:", [""] + forex_options)
-selected_period = st.sidebar.selectbox("Predict How Far?", list(time_periods.keys()), format_func=lambda x: f"{x} days")
+selected_forex = st.sidebar.selectbox("Select FOREX:", [""] + forex_options)
+selected_period = st.sidebar.selectbox("Select Time Period", list(time_periods.keys()), format_func=lambda x: f"{x} days")
 
 # Load models and accuracies
 stock_model, forex_model, stock_accuracies, forex_accuracies = load_trained_models()
@@ -437,8 +437,8 @@ if st.sidebar.button("Predict"):
                         col1, col2, col3, col4 = st.columns(4)
                         col1.markdown(f"<div class='stMetric'><div>Current Price</div><span>₹{current_price:.2f}</span></div>", unsafe_allow_html=True)
                         col1.markdown(f"<div class='stMetric'><div>Predicted Change</div><span>{percent_change}</span></div>", unsafe_allow_html=True)
-                        col2.markdown(f"<div class='stMetric'><div>Accuracy</div><span>{accuracy}</span></div>", unsafe_allow_html=True)
-                        col3.markdown(f"<div class='stMetric'><div>Direction</div><span>{direction}</span></div>", unsafe_allow_html=True)
+                        col2.markdown(f"<div class='stMetric'><div>Prediction Percent</div><span>{accuracy}</span></div>", unsafe_allow_html=True)
+                        col3.markdown(f"<div class='stMetric'><div>Price Direction</div><span>{direction}</span></div>", unsafe_allow_html=True)
                         col4.markdown(f"<div class='stMetric'><div>Recommendation</div><span>{'Buy' if direction == 'Up' else 'Sell'}</span></div>", unsafe_allow_html=True)
                         with st.expander(f"Raw Data for {stock_symbol}"):
                             st.write(f"Raw data for {stock_symbol}:")
@@ -461,8 +461,8 @@ if st.sidebar.button("Predict"):
                         col1, col2, col3, col4 = st.columns(4)
                         col1.markdown(f"<div class='stMetric'><div>Current Price</div><span>₹{current_price:.2f}</span></div>", unsafe_allow_html=True)
                         col1.markdown(f"<div class='stMetric'><div>Predicted Change</div><span>{percent_change}</span></div>", unsafe_allow_html=True)
-                        col2.markdown(f"<div class='stMetric'><div>Accuracy</div><span>{accuracy}</span></div>", unsafe_allow_html=True)
-                        col3.markdown(f"<div class='stMetric'><div>Direction</div><span>{direction}</span></div>", unsafe_allow_html=True)
+                        col2.markdown(f"<div class='stMetric'><div>Prediction Percent</div><span>{accuracy}</span></div>", unsafe_allow_html=True)
+                        col3.markdown(f"<div class='stMetric'><div>Price Direction</div><span>{direction}</span></div>", unsafe_allow_html=True)
                         col4.markdown(f"<div class='stMetric'><div>Recommendation</div><span>{'Buy' if direction == 'Up' else 'Sell'}</span></div>", unsafe_allow_html=True)
                         with st.expander(f"Raw Data for {forex_symbol}"):
                             st.write(f"Raw data for {forex_symbol}:")
