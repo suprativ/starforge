@@ -56,7 +56,8 @@ stocks = {
     "GOOGL": "Alphabet Inc.",
     "MSFT": "Microsoft Corp.",
     "ZOMATO.NS": "Zomato Ltd.",
-    "360ONE.NS": "360 One Wam Limited."
+    "360ONE.NS": "360 One Wam Limited.",
+    "WU": "The Western Union Company."
 }
 
 forex = {
@@ -405,7 +406,7 @@ st.markdown("<h2 style='font-size: 24px; color: Black;'>Predict the Future - Sto
 usd_to_inr = get_usd_to_inr()
 
 # Sidebar
-st.sidebar.title("Click to Select Stock or Forex")
+# st.sidebar.title("Click to Select Stock or Forex")
 stock_options = [f"{symbol} - {name}" for symbol, name in stocks.items()]
 selected_stock = st.sidebar.selectbox("Select a Stock:", [""] + stock_options)
 forex_options = [f"{symbol.replace('=X', '')} - {name}" for symbol, name in forex.items()]
