@@ -17,7 +17,7 @@ if not os.path.exists(SECRET_VAULT):
     os.makedirs(SECRET_VAULT, exist_ok=True)  # Ensure directory exists with permissions
 
 # Fetch 5 or 10 years of data with your twist (optional: use 10y for more data)
-def fetch_star_data(symbol, period="5y"):
+def fetch_star_data(symbol, period="10y"):
     print(f"Fetching star data for {symbol}...")
     data = yf.download(symbol, period=period, progress=False, auto_adjust=True)
     if data.empty or len(data) < 365:  # Handle Series properly
@@ -113,7 +113,7 @@ def calculate_buyer_seller_activity(data):
     data['Buyer_Seller'] = buyer_seller
     return data
 
-# Your proprietary feature crafting with new parameters
+# Supra's proprietary feature crafting with new parameters
 def craft_star_features(data, symbol, forecast_horizons=[15, 30, 180, 365]):
     if data is None or data.empty:
         print("No data for feature crafting!")
