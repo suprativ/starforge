@@ -52,12 +52,12 @@ else:
 
 # Available Stocks and Forex Pairs
 stocks = {
-    "AAPL": "Apple Inc.",
-    "GOOGL": "Alphabet Inc.",
-    "MSFT": "Microsoft Corp.",
     "ZOMATO.NS": "Zomato Ltd.",
     "360ONE.NS": "360 One Wam Limited.",
-    "WU": "The Western Union Company."
+    "VEDL.NS": "Vedanta Ltd.",
+    "ABFRL.NS": "Aditya Birla Fashion and Retail Ltd.",
+    "MOTHERSON.NS":"Samvardhana Motherson International Ltd.",
+    "BEL.NS": "Bharat Electronics Ltd."
 }
 
 forex = {
